@@ -3,7 +3,7 @@ import express from "express";
 const app = express();
 
 app.get("/", (req, res) => {
-    throw new Error("Database connection failed");
+    res.status(200).send("Hello World!");
 });
 
 app.listen(3000, () => {
