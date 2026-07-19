@@ -3,7 +3,7 @@ import express from "express";
 const app = express();
 
 app.get("/", (req, res) => {
-    res.status(200).send("Service is running. Database connection simulated.");
+    throw new Error("Database connection failed");
 });
 
 app.listen(3000, () => {
